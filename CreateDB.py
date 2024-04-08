@@ -6,7 +6,7 @@ def create_database():
         cursor = conn.cursor()
         
         # Creating a table called 'students' with fields: id, name, age, and grade
-        cursor.execute('''CREATE TABLE IF NOT EXISTS students
+        cursor.execute('''CREATE TABLE IF NOT EXISTS Finance
                           (id INTEGER PRIMARY KEY,
                            name TEXT NOT NULL,
                            age INTEGER,

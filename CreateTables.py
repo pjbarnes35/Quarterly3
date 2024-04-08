@@ -4,6 +4,12 @@ def add_tables():
     try:
         conn = sqlite3.connect('class.db')
         cursor = conn.cursor()
+
+         # Adding the questions table with fields: id, name, and description
+        cursor.execute('''CREATE TABLE IF NOT EXISTS questions
+                          (id INTEGER PRIMARY KEY,
+                           name TEXT NOT NULL,
+                           description TEXT)''')
         
         # Adding the Finance table with fields: id, name, and description
         cursor.execute('''CREATE TABLE IF NOT EXISTS Finance
